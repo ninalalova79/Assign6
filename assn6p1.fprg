@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Nina Lalova-Toncheva"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-11-03 05:15:44 PM"/>
+        <attribute name="created" value="TmluYSBMYWxvdmEtVG9uY2hldmE7REVTS1RPUC1PUDlNTUlTOzIwMjAtMTEtMDM7MDM6NDc6MjUgUE07NDI4MQ=="/>
+        <attribute name="edited" value="TmluYSBMYWxvdmEtVG9uY2hldmE7REVTS1RPUC1PUDlNTUlTOzIwMjAtMTEtMDM7MDU6MTU6NDQgUE07MTs0Mzg3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="yos" type="Real" array="False" size=""/>
+            <declare name="award" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter years of service&quot;" newline="False"/>
+            <input variable="yos"/>
+            <assign variable="award" expression="funaward(yos)"/>
+            <output expression="&quot;Award Amount is $&quot;  &amp;  award" newline="True"/>
+        </body>
+    </function>
+    <function name="funaward" type="Real" variable="award">
+        <parameters>
+            <parameter name="yos" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="award" type="Real" array="False" size=""/>
+            <if expression="yos&gt;10">
+                <then>
+                    <assign variable="award" expression="1000"/>
+                </then>
+                <else>
+                    <if expression="yos&gt;=5">
+                        <then>
+                            <assign variable="award" expression="500"/>
+                        </then>
+                        <else>
+                            <assign variable="award" expression="100"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
